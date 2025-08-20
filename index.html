@@ -13,53 +13,86 @@
       margin: 0;
       background-color: #f9f9f9;
       font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+
+    header {
+      background: #007acc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
     }
 
     .container {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      padding: 40px 20px;
       max-width: 1000px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
-    .image-block {
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       overflow: hidden;
+      transition: transform 0.2s;
     }
 
-    .image-block img {
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    .image-block:first-of-type img {
-      height: 100vh;
-      object-fit: cover;
+    .card h2 {
+      margin: 15px;
+      font-size: 1.2rem;
+      color: #007acc;
     }
 
-    @media (max-width: 768px) {
-      .image-block:first-of-type img {
-        height: auto;
-        object-fit: contain;
-      }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #f1f1f1;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="image-block">
-      <img src="image1.png" alt="" />
+  <header>
+    <h1>Dee's Executive Dashboard</h1>
+    <p>Showcasing insights with Canva visuals</p>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <img src="image1.png" alt="Dashboard Visual 1">
+      <h2>Dashboard Overview</h2>
     </div>
-    <div class="image-block">
-      <img src="image2.png" alt="" />
+    <div class="card">
+      <img src="image2.png" alt="Dashboard Visual 2">
+      <h2>Performance Metrics</h2>
     </div>
-    <div class="image-block">
-      <img src="image3.png" alt="" />
+    <div class="card">
+      <img src="image3.png" alt="Dashboard Visual 3">
+      <h2>Growth Trends</h2>
     </div>
-  </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Dee's Portfolio | Built for GitHub Pages</p>
+  </footer>
 </body>
 </html>
