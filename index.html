@@ -4,19 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dee's Executive Dashboard</title>
-
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .image-block {
-      width: 100%;
-      max-width: 1000px;
-      margin: 30px auto;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
       overflow: hidden;
     }
@@ -30,3 +39,27 @@
     .image-block:first-of-type img {
       height: 100vh;
       object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .image-block:first-of-type img {
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-block">
+      <img src="image1.png" alt="" />
+    </div>
+    <div class="image-block">
+      <img src="image2.png" alt="" />
+    </div>
+    <div class="image-block">
+      <img src="image3.png" alt="" />
+    </div>
+  </div>
+</body>
+</html>
