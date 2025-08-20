@@ -3,48 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dee Portfolio</title>
+  <title>Aesthetic Sansar</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: sans-serif;
-      background: #f9f9f9;
-      text-align: center;
+      padding: 0;
+      background-color: #fff;
     }
 
-    .gallery {
+    .container {
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px;
+      flex-direction: column; /* stack items */
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
     }
 
-    .gallery img {
-      width: 300px;
+    .card {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+
+    .card img {
+      width: 100%;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: block;
     }
 
-    footer {
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .footer {
       text-align: center;
       padding: 20px;
-      font-size: 0.9rem;
-      color: #666;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="card">
+      <img src="image1.png" alt="Aesthetic Sansar">
+    </div>
 
-  <div class="gallery">
-    <img src="image1.png" alt="Portfolio Image 1">
-    <img src="image2.png" alt="Portfolio Image 2">
-    <img src="image3.png" alt="Portfolio Image 3">
+    <div class="card">
+      <img src="image2.png" alt="Elevate your everyday">
+    </div>
+
+    <div class="card">
+      <img src="image3.png" alt="Visit our stores">
+    </div>
   </div>
 
-  <footer>
-    <p>© 2025 Dee's Portfolio | Built for GitHub Pages</p>
-  </footer>
-
+  <div class="footer">
+    © 2025 Aesthetic Sansar | Built with GitHub Pages
+  </div>
 </body>
 </html>
